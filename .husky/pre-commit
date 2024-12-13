@@ -1,0 +1,9 @@
+commit_pattern="^(feat|fix|docs|chore|style|refactor|ci|test|build|merge|revert): .+"
+
+if [[ ! $commit_msg =~ $commit_pattern ]]; then
+    echo "error: Invalid commit message format!"
+    echo "The commit message should match the following pattern:"
+    echo "<type>: <message>"
+    echo "Example: feat: first commit message"
+    echo "your commit message: {$commit_msg}"
+fi
